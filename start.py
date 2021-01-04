@@ -1,3 +1,5 @@
+import curses
+
 class Table:
     def __init__(self):
         self.pieces = [
@@ -43,9 +45,22 @@ class Table:
         self.pieces[s_r][s_c] = ' '
         self.pieces[e_r][e_c] = p
 
+def main(scr):
+    h, w = scr.getmaxyx()
+    
+    scr.clear()
+    # curses.resizeterm(10, 10*3)
+    # h = 10
+    # w = 30
+    str_table = table.str_table()
+    for i, l in enumerate(str_table.split('\n')):
+        r = (h - 9)//2 + i
+        c = (w - 9)//2
+        scr.addstr(r, c, l)
+    scr.refresh()
+    scr.getch()
 
 if __name__ == "__main__":
+    global table
     table = Table()
-    print(table.str_table())
-    table.move_piece('a1', 'b3')
-    print(table.str_table())
+    curses.wrapper(main)
