@@ -1,0 +1,66 @@
+{
+    "king": {
+        "char": {
+            "white": "\u2654",
+            "black": "\u265a"
+        },
+        "move": {
+            "distance": 1,
+            "direction": "all"
+        }
+    },
+    "queen": {
+        "char": {
+            "white": "\u2655",
+            "black": "\u265b"
+        },
+        "move": {
+            "distance": "inf",
+            "direction": "all"
+        }
+    },
+    "rook": {
+        "char": {
+            "white": "\u2656",
+            "black": "\u265c"
+        },
+        "move": {
+            "distance": "inf",
+            "direction": "straight"
+        }
+    },
+    "bishop": {
+        "char": {
+            "white": "\u2657",
+            "black": "\u265d"
+        },
+        "move": {
+            "distance": "inf",
+            "direction": "diagonal"
+        }
+    },
+    "knight": {
+        "char": {
+            "white": "\u2658",
+            "black": "\u265e"
+        },
+        "move": {
+            "distance": 1,
+            "direction": "L"
+        }
+    },
+    "pawn": {
+        "char": {
+            "white": "\u2659",
+            "black": "\u265f"
+        },
+        "move": {
+            "distance": 1,
+            "direction": "straight farward"
+        },
+        "eat": {
+            "distance": 1,
+            "direction": "diagonal farward"
+        }
+    }
+}
